@@ -42,24 +42,36 @@ header p{
   opacity:.85;
 }
 
-/* ISTA ANIMACIJA KAO ANDROID */
 @keyframes colorShift{
   0%{color:#25d366;text-shadow:0 0 10px #25d366}
   50%{color:#4da3ff;text-shadow:0 0 10px #4da3ff}
   100%{color:#ff4d8d;text-shadow:0 0 10px #ff4d8d}
 }
 
-/* GRID — IDENTIČNO */
+/* GRID – FIKSNO 4 U REDU */
 .container{
   max-width:1200px;
   margin:auto;
   padding:20px;
   display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap:20px;
 }
 
-/* APP CARD — ISTE DIMENZIJE */
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width:600px){
+  .container{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* APP CARD – ISTA VISINA KAO ANDROID */
 .app{
   background:rgba(255,255,255,0.08);
   border-radius:22px;
@@ -69,7 +81,7 @@ header p{
   display:flex;
   flex-direction:column;
   align-items:center;
-  min-height:260px; /* FIKSNA VISINA */
+  min-height:330px; /* ISTA VISINA KAO ANDROID SA CODE BOX */
 }
 
 .app:hover{
@@ -91,7 +103,7 @@ header p{
   opacity:0.9;
 }
 
-/* DUGME UVEK DOLE */
+/* DUGME DOLE */
 .download{
   margin-top:auto;
   display:inline-block;
@@ -147,6 +159,14 @@ footer{
   <div class="app">
     <img src="images/app3.png" class="app-logo">
     <p>Opis nove iOS aplikacije.</p>
+    <a class="download" href="#" target="_blank">
+      <i class="fas fa-download"></i> Preuzmi
+    </a>
+  </div>
+
+  <div class="app">
+    <img src="images/app4.png" class="app-logo">
+    <p>Još jedna iOS aplikacija.</p>
     <a class="download" href="#" target="_blank">
       <i class="fas fa-download"></i> Preuzmi
     </a>
