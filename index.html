@@ -21,7 +21,7 @@ body{
 
 /* HEADER */
 header{
-  padding:35px 20px 20px;
+  padding:40px 20px 20px;
 }
 
 .main-logo{
@@ -29,75 +29,68 @@ header{
   font-weight:700;
   letter-spacing:2px;
   margin-bottom:15px;
-  animation:colorShift 6s infinite alternate;
 }
 
 header h1{
-  font-size:36px;
+  font-size:34px;
   margin-bottom:10px;
-  animation:colorShift 4s infinite alternate;
 }
+
 header p{
   opacity:.85;
 }
 
-@keyframes colorShift{
-  0%{color:#ffffff;text-shadow:0 0 10px #ffffff}
-  50%{color:#a6a6a6;text-shadow:0 0 10px #a6a6a6}
-  100%{color:#4da3ff;text-shadow:0 0 10px #4da3ff}
-}
-
-/* CONTAINER GRID */
+/* GRID */
 .container{
   max-width:1200px;
   margin:auto;
   padding:20px;
   display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap:20px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap:25px;
 }
 
 /* APP CARD */
 .app{
   background:rgba(255,255,255,0.08);
   border-radius:22px;
-  padding:20px;
+  padding:25px 20px;
   backdrop-filter:blur(10px);
   transition:.4s;
   display:flex;
   flex-direction:column;
+  justify-content:space-between;
   align-items:center;
+  min-height:340px;
 }
+
 .app:hover{
   transform:translateY(-6px);
 }
 
-/* APP LOGO IMAGE */
+/* APP IMAGE */
 .app-logo{
-  width:90px;
-  height:90px;
+  width:100px;
+  height:100px;
   object-fit:contain;
-  margin-bottom:10px;
-  animation:float 3s ease-in-out infinite;
-}
-@keyframes float{
-  0%{transform:translateY(0)}
-  50%{transform:translateY(-8px)}
-  100%{transform:translateY(0)}
+  margin-bottom:15px;
 }
 
-/* DESCRIPTION */
+/* TEXT */
+.app h3{
+  margin:5px 0;
+}
+
 .app p{
   font-size:14px;
-  margin-bottom:12px;
   opacity:0.9;
+  min-height:60px;
 }
 
 /* DOWNLOAD BUTTON */
 .download{
-  display:inline-block;
-  margin-top:10px;
-  padding:10px 25px;
+  margin-top:auto;
+  padding:12px 28px;
   background:#ffffff;
   color:#000;
   text-decoration:none;
@@ -105,14 +98,15 @@ header p{
   font-weight:700;
   transition:.3s;
 }
+
 .download:hover{
-  box-shadow:0 0 20px rgba(255,255,255,.7);
   transform:scale(1.05);
+  box-shadow:0 0 15px rgba(255,255,255,.6);
 }
 
 /* FOOTER */
 footer{
-  margin:40px 0 20px;
+  margin:50px 0 20px;
   font-size:14px;
   opacity:.7;
 }
@@ -124,7 +118,7 @@ footer{
 <header>
   <div class="main-logo">Balkan Media</div>
   <h1><i class="fab fa-apple"></i> iOS aplikacije</h1>
-  <p>Direktno preuzimanje aplikacija za iPhone i iPad</p>
+  <p>Direktno preuzimanje aplikacija za iPhone i iPad uređaje</p>
 </header>
 
 <div class="container">
@@ -132,18 +126,30 @@ footer{
   <!-- APP 1 -->
   <div class="app">
     <img src="images/Balkan Media TV.png" alt="Balkan Media TV" class="app-logo">
+    <h3>Balkan Media TV</h3>
     <p>iOS aplikacija za gledanje Balkan Media sadržaja.</p>
     <a class="download" href="#" target="_blank">
-      <i class="fas fa-download"></i> Preuzmi aplikaciju
+      <i class="fas fa-download"></i> Preuzmi
     </a>
   </div>
 
   <!-- APP 2 -->
   <div class="app">
-    <img src="images/anesa.png" alt="Anesa" class="app-logo">
-    <p>iOS aplikacija za IPTV sadržaj.</p>
+    <img src="images/anesa.png" alt="Anesa IPTV" class="app-logo">
+    <h3>Anesa IPTV</h3>
+    <p>iOS aplikacija za IPTV sadržaj i live kanale.</p>
     <a class="download" href="#" target="_blank">
-      <i class="fas fa-download"></i> Preuzmi aplikaciju
+      <i class="fas fa-download"></i> Preuzmi
+    </a>
+  </div>
+
+  <!-- APP 3 -->
+  <div class="app">
+    <img src="images/app3.png" alt="Nova Aplikacija" class="app-logo">
+    <h3>Nova Aplikacija</h3>
+    <p>Opis nove iOS aplikacije. Ovde ubacite svoj tekst.</p>
+    <a class="download" href="#" target="_blank">
+      <i class="fas fa-download"></i> Preuzmi
     </a>
   </div>
 
